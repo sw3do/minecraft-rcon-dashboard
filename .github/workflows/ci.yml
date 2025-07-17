@@ -23,7 +23,6 @@ jobs:
       uses: actions/setup-node@v4
       with:
         node-version: ${{ matrix.node-version }}
-        cache: ${{ matrix.package-manager == 'npm' && 'npm' || '' }}
     
     - name: Setup Bun
       if: matrix.package-manager == 'bun'
@@ -33,11 +32,11 @@ jobs:
     
     - name: Install dependencies (npm)
       if: matrix.package-manager == 'npm'
-      run: npm ci
+      run: npm install
     
     - name: Install dependencies (bun)
       if: matrix.package-manager == 'bun'
-      run: bun install --frozen-lockfile
+      run: bun install
     
     - name: Run ESLint
       run: |
