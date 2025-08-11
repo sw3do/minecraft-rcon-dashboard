@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "framer-motion": "^12.23.6",
-    "next": "15.4.5",
+    "next": "15.4.6",
     "rcon-client": "^4.2.5",
     "react": "19.1.1",
     "react-dom": "19.1.0"
